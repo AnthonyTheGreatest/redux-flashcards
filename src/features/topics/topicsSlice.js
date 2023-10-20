@@ -4,7 +4,7 @@ import { addQuiz } from "../quizzes/quizzesSlice";
 export const topicsSlice = createSlice({
     name: 'topics',
     initialState: {
-        topics: {}
+        topics: JSON.parse(localStorage.getItem('topics')) || {}
     },
     reducers: {
         addTopic: (state, {payload}) => {

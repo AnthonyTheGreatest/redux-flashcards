@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const quizzesSlice = createSlice({
     name: 'quizzes',
     initialState: {
-        quizzes: {}
+        quizzes: JSON.parse(localStorage.getItem('quizzes')) || {}
     },
     reducers: {
         addQuiz: (state, {payload}) => {
